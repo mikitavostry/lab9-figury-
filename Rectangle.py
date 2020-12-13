@@ -1,5 +1,6 @@
-from Point import Point 
+from Point import Point
 from Polygon import Polygon
+
 
 class Rectangle(Polygon):
     def __init__(self, p1, p2, p3, p4):
@@ -29,3 +30,8 @@ class Rectangle(Polygon):
             return True
         else:
             return False
+
+    def find_area(self):
+        lengthA = self.b.y - self.a.y
+        lengthB = self.d.y - self.c.y
+        return lengthA * lengthB
