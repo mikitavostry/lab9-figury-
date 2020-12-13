@@ -36,7 +36,7 @@ class Searcher:
         for square in foundSquares:
             isGoodSquare = True
             for point in points:
-                if square.a.x < point.x < square.d.x and square.a.y < point.y < square.d.y:
+                if square.is_point_inside(point):
                     isGoodSquare = False
                     break
             if isGoodSquare:

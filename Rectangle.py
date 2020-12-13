@@ -24,4 +24,8 @@ class Rectangle(Polygon):
         self.c = Point(list[2][0], list[2][1])
         self.d = Point(list[3][0], list[3][1])
 
-    
+    def is_point_inside(self, point):
+        if self.a.x < point.x < self.d.x and self.a.y < point.y < self.d.y:
+            return True
+        else:
+            return False

@@ -37,3 +37,5 @@ class Triangle(Polygon):
         self.b = Point(list[1][0], list[1][1])
         self.c = Point(list[2][0], list[2][1])
 
+    def is_point_inside(self):
+        super.is_point_inside()

@@ -1,12 +1,10 @@
-import abc
+from abc import ABC, abstractmethod
 
-class Polygon(object):
-    __metaclass__=abc.ABCMeta
+class Polygon(ABC):
 
-    @abc.abstractmethod
     def find_area(self):
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def is_point_inside(self, point):
         pass
