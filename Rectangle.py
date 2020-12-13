@@ -1,6 +1,7 @@
 from Point import Point 
-from Figure import Figure
-class Rectangle(Figure):
+from Polygon import Polygon
+
+class Rectangle(Polygon):
     def __init__(self, p1, p2, p3, p4):
         self.a = p1
         self.b = p2
@@ -22,3 +23,5 @@ class Rectangle(Figure):
         self.b = Point(list[1][0], list[1][1])
         self.c = Point(list[2][0], list[2][1])
         self.d = Point(list[3][0], list[3][1])
+
+    

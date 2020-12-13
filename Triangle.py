@@ -1,7 +1,7 @@
 import math
 from Point import Point
-from Figure import Figure
-class Triangle(Figure):
+from Polygon import Polygon
+class Triangle(Polygon):
     def __init__(self, p1, p2, p3):
         self.a = p1
         self.b = p2
@@ -36,3 +36,4 @@ class Triangle(Figure):
         self.a = Point(list[0][0], list[0][1])
         self.b = Point(list[1][0], list[1][1])
         self.c = Point(list[2][0], list[2][1])
+
