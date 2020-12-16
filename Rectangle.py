@@ -32,6 +32,7 @@ class Rectangle(Polygon):
             return False
 
     def find_area(self):
+        self.sortPoints()
         lengthA = self.b.y - self.a.y
-        lengthB = self.d.y - self.c.y
+        lengthB = self.c.x - self.b.x
         return lengthA * lengthB

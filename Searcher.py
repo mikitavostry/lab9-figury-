@@ -124,3 +124,51 @@ class Searcher:
 
         return goodTriangles
 
+    @staticmethod
+    def searchForRectangle(points):
+        foundRectangles = []
+
+        for point in points:
+
+            for secondPoint in points:
+                if secondPoint == point:
+                    continue
+
+                if secondPoint.x == point.x:
+                    y = secondPoint.y - point.y
+
+                    if y < 0:
+                        continue
+
+                    for thirdPoint in points:
+                        if thirdPoint == point or thirdPoint == secondPoint:
+                            continue
+
+                        if thirdPoint.y == point.y:
+                            x = thirdPoint.x - point.x
+
+                            if x < 0 or x == y:  # Odrzucam kwadraty
+                                continue
+
+                            desiredPoint = Point(secondPoint.x + x, thirdPoint.y + y)
+
+                            if desiredPoint in points:
+                                rectangle = Rectangle(point, secondPoint, thirdPoint, desiredPoint)
+                                rectangle.sortPoints()
+                                if rectangle not in foundRectangles:
+                                    foundRectangles.append(rectangle)
+        emptyRectangles = []
+        for rectangle in foundRectangles:
+            if Searcher.searchForPointsInsideRectangle(rectangle, points):
+                emptyRectangles.append(rectangle)
+        return emptyRectangles
+
+    @staticmethod
+    def searchForPointsInsideRectangle(rectangle, points):
+        for point in points:
+            if point == rectangle.a or point == rectangle.b or point == rectangle.c or point == rectangle.d:
+                continue
+            if (rectangle.a.y <= point.y <= rectangle.b.y) and (rectangle.a.x <= point.x <= rectangle.c.x):
+                return False
+        return True
+

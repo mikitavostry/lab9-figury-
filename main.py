@@ -9,6 +9,11 @@ if __name__ == "__main__":
     for square in foundSquares:
         print(square)
 
+    foundRectangles = Searcher.searchForRectangle(points)
+    print('Znalezione prostokąty: ')
+    for rectangle in foundRectangles:
+        print(rectangle)
+
     triangles = Searcher.serchForRightEmptyTriangle(points)
     print('Znalezione trójkąty prostokątne: ')
     for triangle in triangles:
@@ -18,5 +23,3 @@ if __name__ == "__main__":
     print('Znalezione trójkąty równoboczne: ')
     for Equilateraltriangle in Equilateraltriangles:
         print(Equilateraltriangle)
-
-
