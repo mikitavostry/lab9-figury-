@@ -1,7 +1,7 @@
 from Triangle import Triangle
 class RightTriangle(Triangle):
     
-    def isPointInside(self, point):
+    def is_point_inside(self, point):
         tr_area = float(format(self.find_area(), '.3f'))
         tr1 = Triangle(self.a, self.b, point)
         tr2 = Triangle(self.a, self.c, point)

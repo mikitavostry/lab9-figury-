@@ -19,7 +19,7 @@ if __name__ == "__main__":
     for triangle in triangles:
         print(triangle)
 
-    Equilateraltriangles = Searcher.searchForEmptyEquilateralTriangle(points)
+    equilateraltriangles = Searcher.searchForEmptyEquilateralTriangle(points)
     print('Znalezione trójkąty równoboczne: ')
-    for Equilateraltriangle in Equilateraltriangles:
-        print(Equilateraltriangle)
+    for equilateraltriangle in equilateraltriangles:
+        print(equilateraltriangle)

@@ -11,3 +11,5 @@ class Point:
             return True
         return False
 
+class PointValueError(Exception):
+    pass

@@ -3,8 +3,14 @@ from Point import Point
 from Polygon import Polygon
 class Triangle(Polygon):
     def __init__(self, p1, p2, p3):
+        if not p1 or not isinstance(p1, Point):
+            raise PointValueError('Incorrect point data')
         self.a = p1
+        if not p2 or not isinstance(p2, Point):
+            raise PointValueError('Incorrect point data')
         self.b = p2
+        if not p3 or not isinstance(p3, Point):
+            raise PointValueError('Incorrect point data')
         self.c = p3
 
     def __str__(self):

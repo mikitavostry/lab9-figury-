@@ -63,7 +63,7 @@ class Searcher:
             flag = True
             for point in points:
                 if trngl.a != point and trngl.b != point and trngl.c != point \
-                        and trngl.isPointInside(point):
+                        and trngl.is_point_inside(point):
                     flag = False
                     break
             if flag:
